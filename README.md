@@ -42,7 +42,7 @@ pip install numpy pandas matplotlib
 
 As bases são carregadas automaticamente pelos scripts através do Pandas, buscando os arquivos `.csv` no diretório de execução:
 
-* **Titanic (`titanic.csv`):** Carregado em `titanic.py`. O script realiza o pré-processamento das variáveis contínuas e categóricas (como sexo e classe), preenche valores faltantes e converte variáveis categóricas de texto (como Sexo) em valores numéricos e aplica One-Hot Encoding na saída da rede neural.
+* **Titanic (`titanic.csv`):** Carregado em `titanic.py`. O script realiza o pré-processamento das variáveis contínuas e categóricas (como sexo e classe), preenche valores faltantes e converte variáveis categóricas de texto (como Sexo) em valores numéricos e aplica One-Hot Encoding no _target_(Y) da rede neural.
 * **Pokémon (`pokemon.csv`):** Carregado em `pokemon.py`. O script seleciona os 9 atributos de combate numéricos (HP, Attack, Defense, etc.), normaliza os dados com Min-Max e utiliza divisão estratificada (*stratified split*) sobre o atributo `Type_1` (18 classes).
 
 Certifique-se de que os nomes dos arquivos `.csv` correspondam aos indicados acima antes de iniciar a execução.
