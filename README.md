@@ -7,8 +7,8 @@ Este repositório contém a implementação dos modelos de aprendizado de máqui
 ## Integrantes do Grupo
 Trabalho acadêmico desenvolvido em colaboração pelos integrantes:
 
-*   **Integrante 1** - Luís Emílio Gonçalves Mendes RA: `11202421308` 
-*   **Integrante 2** - Nicholas Fernandez Garcia RA: `11202421369`
+*   **Integrante 1** - Luís Emílio Gonçalves Mendes
+*   **Integrante 2** - Nicholas Fernandez Garcia
 
 ---
 
