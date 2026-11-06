@@ -20,15 +20,21 @@ if __name__ == "__main__":
     #X = df[colunas_features].values
 
     X = np.nan_to_num(X, nan=0.0)
-    X_min = np.min(X, axis=0)
-    X_max = np.max(X, axis=0)
-    X = (X - X_min) / np.where((X_max - X_min) == 0, 1.0, (X_max - X_min))
+
 
     y_labels = df['Type_1'].values
 
     # divisao dos dados (80% - treino, 20% - teste)
     X_treino, X_teste, Y_treino, Y_teste = train_test_split(X, Y, test_size=0.20, random_state=42, stratify=y_labels)
     
+
+    X_min = np.min(X_treino, axis=0)
+    X_max = np.max(X_treino, axis=0)
+    den = np.where((X_max - X_min) == 0, 1.0, X_max - X_min)
+
+    X_treino = (X_treino - X_min) / den
+    X_teste  = (X_teste  - X_min) / den
+    #X = (X - X_min) / np.where((X_max - X_min) == 0, 1.0, (X_max - X_min))
 
     w1, w2, b1, b2, epocas, perdas = treinar_mlp(X_treino, Y_treino, 32, 0.1, 0.01, 10000) # neuronios, eta, paciencia, limite_epocas
 

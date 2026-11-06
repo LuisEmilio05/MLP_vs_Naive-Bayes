@@ -35,17 +35,22 @@ def salvar_matriz_confusao(matriz_confusao, nomes_classes, nome):
     nome_arquivo = "matriz_" + nome + ".png"
     fig, ax = plt.subplots(figsize=(10, 8))
     disp = ConfusionMatrixDisplay(confusion_matrix=matriz_confusao, display_labels=nomes_classes)
-    disp.plot(cmap="Blues", values_format="d", ax=ax, xticks_rotation=90)
+    disp.plot(cmap="Blues", values_format="d", ax=ax, xticks_rotation=90, colorbar=False, text_kw={'fontsize': 20})
+    plt.subplots_adjust(left=0.15, right=0.98, top=0.92, bottom=0.22)
+    ax.tick_params(axis='x', labelsize=10)
+    ax.tick_params(axis='y', labelsize=10)
+    for text in disp.text_.ravel():
+        text.set_fontsize(13) # Tamanho 20 para Titanic
+        text.set_fontweight('bold')
     plt.title("Matriz de Confusão - (Conjunto de Teste)")
     plt.tight_layout()
-    plt.savefig(nome_arquivo, dpi=300)
     print(f"Figura da matriz guardada em: '{nome_arquivo}'")
     plt.show()
 
 
 def salvar_curva_erro(epocas, perdas, nome):
     nome_arquivo = "perda_" + nome + ".png"
-    plt.figure(figsize=(8, 5))
+    plt.figure(figsize=(10, 8))
     plt.plot(epocas, perdas, color="darkblue", linewidth=1.5)
     plt.title("Curva de Aprendizagem - MLP")
     plt.xlabel("Épocas")
