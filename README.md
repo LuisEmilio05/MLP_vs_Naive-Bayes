@@ -81,12 +81,6 @@ python pokemon.py
 
 
 
-## Artigo
-Se deseja saber mais sobre o nosso projeto, acesse o documento abaixo:
-
-*   [📘 Artigo Científico - (PDF)](documentos/Relatorio_Tecnico.pdf)
-
-
 
 
 
