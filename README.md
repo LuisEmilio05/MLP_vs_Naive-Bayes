@@ -33,7 +33,7 @@ Para a correta execução dos experimentos, garanta que os arquivos de código e
 O projeto requer **Python 3.8** ou superior. As dependências necessárias podem ser instaladas via terminal com o comando:
 
 ```bash
-pip install numpy pandas matplotlib
+pip install numpy pandas matplotlib scikit-learn
 ```
 
 ---
@@ -42,8 +42,8 @@ pip install numpy pandas matplotlib
 
 As bases são carregadas automaticamente pelos scripts através do Pandas, buscando os arquivos `.csv` no diretório de execução:
 
-* **Titanic (`titanic.csv`):** Carregado em `titanic.py`. O script realiza o pré-processamento das variáveis contínuas e categóricas (como sexo e classe), preenche valores faltantes e converte variáveis categóricas de texto (como Sexo) em valores numéricos e aplica One-Hot Encoding no _target_ (Y) da rede neural.
-* **Pokémon (`pokemon.csv`):** Carregado em `pokemon.py`. O script seleciona os 9 atributos de combate numéricos (HP, Attack, Defense, etc.), normaliza os dados com Min-Max e utiliza divisão estratificada (*stratified split*) sobre o atributo `Type_1` (18 classes).
+* **Titanic (`titanic.csv`):** Carregado em `titanic.py`. 
+* **Pokémon (`pokemon.csv`):** Carregado em `pokemon.py`. 
 
 Certifique-se de que os nomes dos arquivos `.csv` correspondam aos indicados acima antes de iniciar a execução.
 
@@ -78,7 +78,3 @@ python pokemon.py
   * Curva de erro por época: `perda_Pokemon_MLP.png`.
   * Matriz de confusão $18 \times 18$: `matriz_Pokemon_MLP.png`.
   * Matriz de confusão do NB: `matriz_Pokemon_NB.png`.
-
-
-
-
