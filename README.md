@@ -79,31 +79,6 @@ python pokemon.py
   * Matriz de confusão $18 \times 18$: `matriz_Pokemon_MLP.png`.
   * Matriz de confusão do NB: `matriz_Pokemon_NB.png`.
 
-## Artigo
-Se deseja saber mais sobre o nosso projeto, acesse o documento abaixo:
-
-*   [📘 Artigo Científico - (PDF)](documentos/Relatorio_Tecnico.pdf)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
